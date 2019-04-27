@@ -23,16 +23,12 @@ public class Player : Character {
 	public Transform leftWeaponPoint;
 	public Transform rightWeaponPoint;
 
-	private SpriteRenderer spriteRenderer;
-
 	// EXECUTION METHODS
 
 	protected override void Awake () {
 		base.Awake();
 
 		attackDirection = new Vector2(0f, -1f);
-
-		spriteRenderer = GetComponent<SpriteRenderer>();
 	}
 
 	private void Start() {

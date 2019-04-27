@@ -16,10 +16,8 @@ public class StoreManager : MonoBehaviour {
 	}
 
 	private void OnEnable() {
-		int numOfWeapons = Random.Range(1, Mathf.Clamp(allWeapons.Length+1, 0, 7));
-
-		for (int i = 0; i < numOfWeapons; i++) {
-			itemPrefab.GetComponent<StoreItem>().weapon = allWeapons[Random.Range(0, numOfWeapons)];
+		for (int i = 0; i < allWeapons.Length; i++) {
+			itemPrefab.GetComponent<StoreItem>().weapon = allWeapons[i];
 
 			GameObject go = Instantiate(itemPrefab) as GameObject;
 			go.transform.SetParent(itemList.transform);

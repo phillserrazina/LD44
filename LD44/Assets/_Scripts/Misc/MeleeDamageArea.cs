@@ -18,7 +18,7 @@ public class MeleeDamageArea : MonoBehaviour {
 		if (other.GetComponent<Character>() == null || hit)
 			return;
 
-		other.gameObject.GetComponent<Character>().healthPoints -= weapon.damage;
+		other.gameObject.GetComponent<Character>().TakeDamage(weapon.damage);
 		hit = true;
 	}
 }
