@@ -49,6 +49,7 @@ public class Player : Character {
 	// METHODS
 
 	public void Initialize() {
+		currentWeaponIndex = availableWeapons.Count - 1;
 		UpdateWeapon(availableWeapons[currentWeaponIndex]);
 	}
 

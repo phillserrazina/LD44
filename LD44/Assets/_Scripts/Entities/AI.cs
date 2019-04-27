@@ -11,8 +11,13 @@ public class AI : Character {
 	private float attackCD = 1f;
 	private float currentAttackCD = 0;
 
+	private GameManager gameManager;
+
+	// EXECUTION FUNCTIONS
+
 	protected override void Awake() {
 		base.Awake();
+		gameManager = FindObjectOfType<GameManager>();
 		player = FindObjectOfType<Player>();
 	}
 
@@ -31,7 +36,9 @@ public class AI : Character {
 			}
 		}
 
-		if (this.healthPoints <= 0)
+		if (this.healthPoints <= 0) {
 			Destroy(this.gameObject);
+			gameManager.killedEnemies++;
+		}
 	}
 }
