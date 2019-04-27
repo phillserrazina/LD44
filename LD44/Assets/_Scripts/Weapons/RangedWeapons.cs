@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour {
+public class RangedWeapons : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

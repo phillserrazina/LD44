@@ -13,7 +13,11 @@ public class AI : Character {
 	}
 
 	private void FixedUpdate() {
-		if (Vector2.Distance(transform.position, player.transform.position) > distToStop)
+		if (Vector2.Distance(transform.position, player.transform.position) > distToStop) {
 			transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.fixedDeltaTime);
+		}
+
+		if (this.healthPoints <= 0)
+			Destroy(this.gameObject);
 	}
 }

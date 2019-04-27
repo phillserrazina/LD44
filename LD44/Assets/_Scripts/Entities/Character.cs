@@ -8,8 +8,8 @@ public class Character : MonoBehaviour {
 
 	public float healthPoints = 100f;
 	public float speed = 0;
-	protected float verticalDirection = 0;
-	protected float horizontalDirection = 0;
+	protected int verticalDirection = 0;
+	protected int horizontalDirection = 0;
 
 	protected Rigidbody2D rb;
 
