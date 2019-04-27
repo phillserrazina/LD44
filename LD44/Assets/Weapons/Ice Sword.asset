@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4bd7fdda16359d4db1b2438097b0129, type: 3}
+  m_Name: Ice Sword
+  m_EditorClassIdentifier: 
+  damage: 1
+  price: 0
+  graphic: {fileID: 21300000, guid: 602a97b4acb70f043b7434c88523dbc5, type: 3}
+  slowRate: 20
+  slowDuration: 5
+  damagePerSecond: 0
+  dpsDuration: 0

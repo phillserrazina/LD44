@@ -132,7 +132,7 @@ public class Player : Character {
 	}
 
 	private void UpdateWeapon(WeaponSO newData) {
-		currentWeapon.damage = newData.damage;
+		currentWeapon.weaponData = newData;
 		currentWeapon.GetComponent<SpriteRenderer>().sprite = newData.graphic;
 	}
 }

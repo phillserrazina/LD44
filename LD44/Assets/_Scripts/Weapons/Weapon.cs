@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour {
 
-	public float damage;
+	public WeaponSO weaponData;
 
 	public abstract IEnumerator Attack();
 }

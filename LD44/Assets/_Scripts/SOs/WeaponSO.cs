@@ -9,4 +9,10 @@ public class WeaponSO : ScriptableObject {
 	public float damage;
 	public float price;
 	public Sprite graphic;
+
+	[Header("Extra Effects")]
+	[Range(0, 100)] public float slowRate;
+	public float slowDuration;
+	public float damagePerSecond;
+	public float dpsDuration;
 }

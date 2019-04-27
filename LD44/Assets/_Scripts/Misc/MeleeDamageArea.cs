@@ -18,7 +18,11 @@ public class MeleeDamageArea : MonoBehaviour {
 		if (other.GetComponent<Character>() == null || hit)
 			return;
 
-		other.gameObject.GetComponent<Character>().TakeDamage(weapon.damage);
+		other.gameObject.GetComponent<Character>().TakeDamage(weapon.weaponData.damage,
+																weapon.weaponData.slowRate,
+																weapon.weaponData.slowDuration,
+																weapon.weaponData.damagePerSecond,
+																weapon.weaponData.dpsDuration);
 		hit = true;
 	}
 }
