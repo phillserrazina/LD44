@@ -18,6 +18,7 @@ public class WeaponSO : ScriptableObject {
 	public Sprite graphic;
 
 	public Projectile projectile;
+	[HideInInspector] public int currentAmmo;
 
 	[Header("Extra Effects")]
 	[Range(0, 100)] public float slowRate;

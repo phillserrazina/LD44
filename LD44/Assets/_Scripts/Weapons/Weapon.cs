@@ -25,6 +25,10 @@ public class Weapon : MonoBehaviour {
 	// METHODS
 
 	public void RangedAttack() {
+		if (weaponData.currentAmmo <= 0)
+			return;
+		
+		weaponData.currentAmmo--;
 		Projectile p = Instantiate(weaponData.projectile, gameObject.transform.position, Quaternion.identity);
 				p.caster = player;
 				p.Initialize();

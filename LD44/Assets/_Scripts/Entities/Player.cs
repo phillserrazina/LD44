@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Player : Character {
 
@@ -23,6 +24,10 @@ public class Player : Character {
 	public Transform leftWeaponPoint;
 	public Transform rightWeaponPoint;
 
+	public GameObject ammoVisual;
+	public Image currentWeaponIcon;
+	public TMP_Text ammoText;
+
 	// EXECUTION METHODS
 
 	protected override void Awake () {
@@ -41,6 +46,18 @@ public class Player : Character {
 		if (healthPoints <= 0)
 			return;
 		
+		if (currentWeapon.weaponData != null) {
+			currentWeaponIcon.sprite = currentWeapon.weaponData.graphic;
+			ammoText.text = currentWeapon.weaponData.currentAmmo.ToString();
+
+			if (currentWeapon.weaponData.weaponType == WeaponSO.WeaponTypes.RANGED) {
+				ammoVisual.SetActive(true);
+			}
+			else {
+				ammoVisual.SetActive(false);
+			}
+		}
+
 		GetInput();
 		UpdateAnimations();
 	}
@@ -54,6 +71,9 @@ public class Player : Character {
 	public void Initialize() {
 		currentWeaponIndex = availableWeapons.Count - 1;
 		UpdateWeapon(availableWeapons[currentWeaponIndex]);
+		for (int i = 0; i < availableWeapons.Count; i++) {
+			availableWeapons[i].currentAmmo = PlayerPrefs.GetInt("Level") * 4;
+		}
 	}
 
 	private void GetInput() {
