@@ -27,6 +27,10 @@ public class Character : MonoBehaviour {
 		healthPoints -= dmg;
 		StartCoroutine(TakeDamageVisuals(slowDuration > 0));
 
+		if (gameObject.name == "Player") {
+			StartCoroutine(ShakeCamera(0.2f, 0.05f));
+		}
+
 		if (slowDuration != 0)
 			StartCoroutine(ApplySlow(slow, slowDuration));
 		if (dpsDuration != 0) {
@@ -59,6 +63,28 @@ public class Character : MonoBehaviour {
 			duration--;
 			StartCoroutine (ApplyDps(dmg, duration));
 		}
-		
+	}
+
+	private IEnumerator ShakeCamera (float duration, float magnitude)
+	{	
+		Vector3 originalPosition = Camera.main.transform.localPosition;
+		float elapsed = 0.0f;
+
+		Camera.main.GetComponentInParent<CamFollowPlayer>().enabled = false;
+
+		while (elapsed < duration)
+		{
+			float x = Random.Range (-1f, 1f) * magnitude;
+			float y = Random.Range (-1f, 1f) * magnitude;
+
+			elapsed += Time.deltaTime;
+
+			Camera.main.transform.localPosition = new Vector3 (x, y, originalPosition.z);
+
+			yield return null;
+		}
+
+		Camera.main.transform.localPosition = originalPosition;
+		Camera.main.GetComponentInParent<CamFollowPlayer>().enabled = true;
 	}
 }
