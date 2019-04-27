@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour {
 	private int currentLevel = 1;
 
 	private bool gameIsRunning = false;
-	private bool gameOver = false;
 
 	private Player player;
 	private SpawnManager spawnManager;

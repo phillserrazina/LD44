@@ -31,8 +31,10 @@ public class Character : MonoBehaviour {
 
 		if (slowDuration != 0)
 			StartCoroutine(ApplySlow(slow, slowDuration));
-		if (dpsDuration != 0)
+		if (dpsDuration != 0) {
+			StopCoroutine("ApplyDps");
 			StartCoroutine(ApplyDps(dps, dpsDuration));
+		}
 	}
 
 	private IEnumerator TakeDamageVisuals(bool slowed) {
