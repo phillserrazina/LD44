@@ -31,7 +31,6 @@ public class Player : Character {
 		base.Awake();
 
 		attackDirection = new Vector2(0f, -1f);
-		UpdateWeapon(availableWeapons[currentWeaponIndex]);
 
 		spriteRenderer = GetComponent<SpriteRenderer>();
 	}
@@ -52,6 +51,10 @@ public class Player : Character {
 	}
 
 	// METHODS
+
+	public void Initialize() {
+		UpdateWeapon(availableWeapons[currentWeaponIndex]);
+	}
 
 	private void GetInput() {
 		verticalDirection = (int)Input.GetAxisRaw("Vertical");

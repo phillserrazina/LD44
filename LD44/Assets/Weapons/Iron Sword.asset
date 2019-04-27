@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: Iron Sword
   m_EditorClassIdentifier: 
   damage: 10
+  price: 10
   graphic: {fileID: 21300000, guid: 6b8f6ee81427d8046a8c5fc79ec4a35a, type: 3}
