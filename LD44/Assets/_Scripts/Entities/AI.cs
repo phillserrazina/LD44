@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class AI : Character {
 
-	public float distToStop;
 	public float damage;
-	private Player player;
 	public int level;
 
-	private float attackCD = 1f;
-	private float currentAttackCD = 0;
+	public float attackCD = 1f;
+	protected float currentAttackCD = 0;
 
-	private GameManager gameManager;
+	protected GameManager gameManager;
+	protected Player player;
 
 	// EXECUTION FUNCTIONS
 
@@ -22,21 +21,7 @@ public class AI : Character {
 		player = FindObjectOfType<Player>();
 	}
 
-	private void FixedUpdate() {
-		if (Vector2.Distance(transform.position, player.transform.position) > distToStop) {
-			transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.fixedDeltaTime);
-		}
-		else
-		{
-			if (currentAttackCD <= 0) {
-				player.TakeDamage(damage);
-				currentAttackCD = attackCD;
-			}
-			else {
-				currentAttackCD -= Time.fixedDeltaTime;
-			}
-		}
-
+	protected virtual void FixedUpdate() {
 		if (this.healthPoints <= 0) {
 			Destroy(this.gameObject);
 			gameManager.killedEnemies++;
