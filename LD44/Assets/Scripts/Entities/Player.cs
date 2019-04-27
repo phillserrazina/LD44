@@ -6,6 +6,10 @@ public class Player : Character {
 
 	// EXECUTION METHODS
 
+	protected override void Awake () {
+		base.Awake();
+	}
+
 	private void Update () {
 		GetInput();
 	}

@@ -6,6 +6,7 @@ public class Character : MonoBehaviour {
 
 	// VARIABLES
 
+	public float healthPoints = 100f;
 	public float speed = 0;
 	protected float verticalDirection = 0;
 	protected float horizontalDirection = 0;
@@ -14,7 +15,7 @@ public class Character : MonoBehaviour {
 
 	// EXECUTION METHODS
 
-	private void Awake () {
+	protected virtual void Awake () {
 		rb = GetComponent<Rigidbody2D>();
 	}
 }
