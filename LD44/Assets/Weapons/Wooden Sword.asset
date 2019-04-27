@@ -11,6 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4bd7fdda16359d4db1b2438097b0129, type: 3}
   m_Name: Wooden Sword
   m_EditorClassIdentifier: 
+  weaponType: 1
   damage: 5
   price: 5
   graphic: {fileID: 21300000, guid: 2e1d70c7f5d733f43afff5cc2268ac69, type: 3}
+  projectile: {fileID: 0}
+  slowRate: 0
+  slowDuration: 0
+  damagePerSecond: 0
+  dpsDuration: 0

@@ -1735,6 +1735,7 @@ MonoBehaviour:
   - {fileID: 1438205702967268, guid: 4b3f5371acbb4fa468a207358a4517c1, type: 2}
   - {fileID: 1825566060761146, guid: ee06a713826ef6f49820a16808896c4a, type: 2}
   - {fileID: 1574132812989992, guid: 954fbe5010691ea4db8bc0020fa99cd7, type: 2}
+  - {fileID: 1574132812989992, guid: 276f52e496609c841b4b793e558631a5, type: 2}
   spawnRate: 1
   minSpawnTime: 0.5
   maxSpawnTime: 1
@@ -1832,7 +1833,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1137467923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc47eb857e71f74cbb1f3f7c90dbd75, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dc1c7e60e8cec742ac979d3724e711b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 0}
@@ -2810,6 +2811,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 44e74f0423bbe8444aecde4b7697d3af, type: 2}
   - {fileID: 11400000, guid: 0e253f928890b2b4ba9ee66ad34e2173, type: 2}
   - {fileID: 11400000, guid: 3d8dbcc24a142c84289c1b585e461648, type: 2}
+  - {fileID: 11400000, guid: 9f237df26b7c45a419a85ac6ac404651, type: 2}
+  - {fileID: 11400000, guid: 88f26d6dcb607ca4998759df02e2b8d8, type: 2}
 --- !u!114 &1874597756
 MonoBehaviour:
   m_ObjectHideFlags: 0

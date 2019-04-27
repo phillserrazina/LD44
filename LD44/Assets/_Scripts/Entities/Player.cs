@@ -61,7 +61,10 @@ public class Player : Character {
 			attackDirection = new Vector2(horizontalDirection, verticalDirection);
 		
 		if (Input.GetKeyDown(KeyCode.Space)) {
-			StartCoroutine(currentWeapon.Attack());
+			if (currentWeapon.weaponData.weaponType == WeaponSO.WeaponTypes.MELEE)
+				StartCoroutine(currentWeapon.MeleeAttack());
+			if (currentWeapon.weaponData.weaponType == WeaponSO.WeaponTypes.RANGED)
+				currentWeapon.RangedAttack();
 		}
 
 		if (Input.GetKeyDown(KeyCode.E)) {

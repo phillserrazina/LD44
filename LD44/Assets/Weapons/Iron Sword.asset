@@ -11,6 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4bd7fdda16359d4db1b2438097b0129, type: 3}
   m_Name: Iron Sword
   m_EditorClassIdentifier: 
+  weaponType: 1
   damage: 10
   price: 10
   graphic: {fileID: 21300000, guid: 6b8f6ee81427d8046a8c5fc79ec4a35a, type: 3}
+  projectile: {fileID: 0}
+  slowRate: 0
+  slowDuration: 0
+  damagePerSecond: 0
+  dpsDuration: 0
