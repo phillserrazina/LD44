@@ -7,11 +7,23 @@ public class Player : Character {
 
 	// VARIABLES
 
-	public WeaponSO[] availableWeapons;
+	public List<WeaponSO> availableWeapons = new List<WeaponSO>();
 	public Weapon currentWeapon;
 	private int currentWeaponIndex = 0;
 	public Vector2 attackDirection { get; private set; }
 	public GameObject damageArea;
+
+	[Header("Visuals")]
+	public Sprite frontModel;
+	public Sprite leftSideModel;
+	public Sprite rightSideModel;
+	public Sprite backModel;
+
+	public Transform frontWeaponPoint;
+	public Transform leftWeaponPoint;
+	public Transform rightWeaponPoint;
+
+	private SpriteRenderer spriteRenderer;
 
 	// EXECUTION METHODS
 
@@ -20,10 +32,19 @@ public class Player : Character {
 
 		attackDirection = new Vector2(0f, -1f);
 		UpdateWeapon(availableWeapons[currentWeaponIndex]);
+
+		spriteRenderer = GetComponent<SpriteRenderer>();
+	}
+
+	private void Start() {
+		spriteRenderer.sprite = frontModel;
+		currentWeapon.transform.position = frontWeaponPoint.position;
+		currentWeapon.transform.rotation = frontWeaponPoint.rotation;
 	}
 
 	private void Update () {
 		GetInput();
+		UpdateAnimations();
 	}
 
 	private void FixedUpdate() {
@@ -46,7 +67,7 @@ public class Player : Character {
 		if (Input.GetKeyDown(KeyCode.E)) {
 			currentWeaponIndex++;
 			
-			if (currentWeaponIndex == availableWeapons.Length)
+			if (currentWeaponIndex == availableWeapons.Count)
 				currentWeaponIndex = 0;
 				
 			UpdateWeapon(availableWeapons[currentWeaponIndex]);
@@ -55,6 +76,29 @@ public class Player : Character {
 
 	private void MoveCharacter() {
 		rb.velocity = new Vector2(horizontalDirection, verticalDirection) * speed * Time.fixedDeltaTime;
+	}
+
+	private void UpdateAnimations() {
+		if (verticalDirection > 0) {
+			spriteRenderer.sprite = backModel;
+			currentWeapon.transform.position = frontWeaponPoint.position;
+			currentWeapon.transform.rotation = frontWeaponPoint.rotation;
+		}
+		else if (verticalDirection < 0) {
+			spriteRenderer.sprite = frontModel;
+			currentWeapon.transform.position = frontWeaponPoint.position;
+			currentWeapon.transform.rotation = frontWeaponPoint.rotation;
+		}
+		else if (horizontalDirection > 0) {
+			spriteRenderer.sprite = rightSideModel;
+			currentWeapon.transform.position = rightWeaponPoint.position;
+			currentWeapon.transform.rotation = rightWeaponPoint.rotation;
+		}
+		else if (horizontalDirection < 0) {
+			spriteRenderer.sprite = leftSideModel;
+			currentWeapon.transform.position = leftWeaponPoint.position;
+			currentWeapon.transform.rotation = leftWeaponPoint.rotation;
+		}
 	}
 
 	public void UpdateDamageAreaPos() {

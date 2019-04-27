@@ -7,5 +7,6 @@ using UnityEngine.UI;
 public class WeaponSO : ScriptableObject {
 
 	public float damage;
+	public float price;
 	public Sprite graphic;
 }
