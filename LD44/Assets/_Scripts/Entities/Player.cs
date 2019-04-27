@@ -38,6 +38,9 @@ public class Player : Character {
 	}
 
 	private void Update () {
+		if (healthPoints <= 0)
+			return;
+		
 		GetInput();
 		UpdateAnimations();
 	}

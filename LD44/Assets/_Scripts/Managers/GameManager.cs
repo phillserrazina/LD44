@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour {
 	// EXECUTION FUNCTIONS
 
 	private void Awake() {
+		if (PlayerPrefs.GetInt("Level") <= 0)
+			PlayerPrefs.SetInt("Level", 1);
 		currentLevel = PlayerPrefs.GetInt("Level", 1);
 		player = FindObjectOfType<Player>();
 		spawnManager = FindObjectOfType<SpawnManager>();
