@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4bd7fdda16359d4db1b2438097b0129, type: 3}
+  m_Name: Iron Sword
+  m_EditorClassIdentifier: 
+  damage: 10
+  graphic: {fileID: 21300000, guid: 6b8f6ee81427d8046a8c5fc79ec4a35a, type: 3}

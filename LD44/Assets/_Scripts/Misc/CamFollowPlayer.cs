@@ -13,7 +13,7 @@ public class CamFollowPlayer : MonoBehaviour {
 	}
 
 	private void Update() {
-		Vector3 pos = player.transform.position + new Vector3(0f, 0f, -5f);
+		Vector3 pos = player.transform.position + new Vector3(0f, 0f, -4f);
 		transform.position = Vector3.SmoothDamp(transform.position, pos, ref velocity, smoothness);
 	}
 }

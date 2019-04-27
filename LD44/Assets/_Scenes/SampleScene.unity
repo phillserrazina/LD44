@@ -392,7 +392,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -429,7 +429,6 @@ Transform:
   m_Children:
   - {fileID: 1233663723}
   - {fileID: 1137467924}
-  - {fileID: 2066967022}
   m_Father: {fileID: 798236838}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -446,8 +445,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 100
   speed: 100
+  availableWeapons:
+  - {fileID: 11400000, guid: d4950f544f841544686c4ce80fd1525c, type: 2}
+  - {fileID: 11400000, guid: 44e74f0423bbe8444aecde4b7697d3af, type: 2}
   currentWeapon: {fileID: 1137467925}
-  meleeAttackEffect: {fileID: 2066967021}
+  damageArea: {fileID: 1233663722}
 --- !u!212 &565957330
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -638,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d23be4b87c2ce4398d0ea0abd3ccd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 0
+  maxEnemies: 5
   enemies:
   - {fileID: 1438205702967268, guid: 4b3f5371acbb4fa468a207358a4517c1, type: 2}
   spawnRate: 1
@@ -655,7 +657,7 @@ GameObject:
   - component: {fileID: 1137467926}
   - component: {fileID: 1137467925}
   m_Layer: 0
-  m_Name: Wooden Sword
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -686,8 +688,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
-  damageArea: {fileID: 1233663722}
-  currentTarget: {fileID: 0}
 --- !u!212 &1137467926
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -760,7 +760,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2066967022}
   m_Father: {fileID: 565957328}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1046,7 +1047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2066967022
 Transform:
   m_ObjectHideFlags: 0
@@ -1054,11 +1055,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2066967021}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.271, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 565957328}
-  m_RootOrder: 2
+  m_Father: {fileID: 1233663723}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2066967023
 SpriteRenderer:
