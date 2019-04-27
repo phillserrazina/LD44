@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject endScreen;
 	public GameObject victoryScreen;
-	public Sprite currentArenaGraphic;
+	public SpriteRenderer currentArenaGraphic;
 	public Sprite[] arenaGraphics;
 	[HideInInspector] public int killedEnemies = 0;
 	private int currentLevel = 1;
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour {
 		spawnManager = FindObjectOfType<SpawnManager>();
 		player.healthPoints = 5 * currentLevel;
 
-		currentArenaGraphic = arenaGraphics[Random.Range(0, arenaGraphics.Length - 1)];
+		currentArenaGraphic.sprite = arenaGraphics[Random.Range(0, arenaGraphics.Length)];
 	}
 
 	private void Update() {
@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour {
 
 		if (player.healthPoints <= 0) {
 			Time.timeScale = 0;
-			PlayerPrefs.SetInt("Level", 1);
 			endScreen.SetActive(true);
 		}
 

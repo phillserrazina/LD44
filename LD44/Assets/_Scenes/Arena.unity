@@ -706,9 +706,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endScreen: {fileID: 845494012}
   victoryScreen: {fileID: 1379216273}
-  currentArenaGraphic: {fileID: 0}
+  currentArenaGraphic: {fileID: 1790935281}
   arenaGraphics:
   - {fileID: 21300000, guid: f62edf48e2470c3469c6850835d1f8ce, type: 3}
+  - {fileID: 21300000, guid: dfbbd695e9fe4af4e9e6452cd286fd56, type: 3}
+  - {fileID: 21300000, guid: f49a607f25ee3d6438b46cdbf0a3c36b, type: 3}
+  - {fileID: 21300000, guid: 58e8dae460becc34a9f15cfc7adf616b, type: 3}
   killedEnemies: 0
 --- !u!1 &300472765
 GameObject:
@@ -1728,8 +1731,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEnemies: 5
-  enemies:
+  allEnemies:
   - {fileID: 1438205702967268, guid: 4b3f5371acbb4fa468a207358a4517c1, type: 2}
+  - {fileID: 1825566060761146, guid: ee06a713826ef6f49820a16808896c4a, type: 2}
   spawnRate: 1
   minSpawnTime: 0.5
   maxSpawnTime: 1
@@ -2803,8 +2807,8 @@ MonoBehaviour:
   allWeapons:
   - {fileID: 11400000, guid: d4950f544f841544686c4ce80fd1525c, type: 2}
   - {fileID: 11400000, guid: 44e74f0423bbe8444aecde4b7697d3af, type: 2}
-  - {fileID: 11400000, guid: 3d8dbcc24a142c84289c1b585e461648, type: 2}
   - {fileID: 11400000, guid: 0e253f928890b2b4ba9ee66ad34e2173, type: 2}
+  - {fileID: 11400000, guid: 3d8dbcc24a142c84289c1b585e461648, type: 2}
 --- !u!114 &1874597756
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,7 +7,8 @@ public class SpawnManager : MonoBehaviour {
 	public int maxEnemies;
 	private int currentEnemies;
 
-	public GameObject[] enemies;
+	public GameObject[] allEnemies;
+	private List<GameObject> canSpawnEnemies = new List<GameObject>();
 
 	public float spawnRate;
 	public float minSpawnTime;
@@ -18,6 +19,13 @@ public class SpawnManager : MonoBehaviour {
 
 	private void Awake() {
 		player = FindObjectOfType<Player>();
+		maxEnemies = 5 * PlayerPrefs.GetInt("Level");
+
+		foreach (GameObject e in allEnemies) {
+			if (e.GetComponent<AI>().level <= PlayerPrefs.GetInt("Level")) {
+				canSpawnEnemies.Add(e);
+			}
+		}
 	}
 	
 	private void Update() {
@@ -39,7 +47,7 @@ public class SpawnManager : MonoBehaviour {
 
 		Vector2 spawnPos = new Vector2(spawnX, spawnY);
 
-		Instantiate(enemies[0], spawnPos, Quaternion.identity);
+		Instantiate(canSpawnEnemies[Random.Range(0, canSpawnEnemies.Count)], spawnPos, Quaternion.identity);
 		currentEnemies++;
 	}
 }

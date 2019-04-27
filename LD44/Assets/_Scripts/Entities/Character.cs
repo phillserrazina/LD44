@@ -11,8 +11,6 @@ public class Character : MonoBehaviour {
 	protected int verticalDirection = 0;
 	protected int horizontalDirection = 0;
 
-	private float takingDpsTime = 0;
-
 	protected Rigidbody2D rb;
 	protected SpriteRenderer spriteRenderer;
 

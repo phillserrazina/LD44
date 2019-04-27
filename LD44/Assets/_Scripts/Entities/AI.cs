@@ -7,6 +7,7 @@ public class AI : Character {
 	public float distToStop;
 	public float damage;
 	private Player player;
+	public int level;
 
 	private float attackCD = 1f;
 	private float currentAttackCD = 0;
