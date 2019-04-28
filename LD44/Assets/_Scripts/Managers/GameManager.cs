@@ -23,12 +23,17 @@ public class GameManager : MonoBehaviour {
 
 	public bool gameIsPaused = false;
 
+	private bool hasPlayedCheer = false;
+
 	private Player player;
 	private SpawnManager spawnManager;
+	private AudioManager audioManager;
 
 	// EXECUTION FUNCTIONS
 
 	private void Awake() {
+		audioManager = FindObjectOfType<AudioManager>();
+
 		if (SceneManager.GetActiveScene().name == "MainMenu") {
 			return;
 		}
@@ -57,6 +62,10 @@ public class GameManager : MonoBehaviour {
 
 		if (killedEnemies >= spawnManager.maxEnemies) {
 			victoryScreen.SetActive(true);
+			if (!hasPlayedCheer) {
+				hasPlayedCheer = true;
+				audioManager.Play("Cheering");
+			}
 		}
 
 		if (endScreen.activeSelf == true || victoryScreen.activeSelf == true || storeMenu.activeSelf == true) {
@@ -79,6 +88,7 @@ public class GameManager : MonoBehaviour {
 	public void StartGame() {
 		Time.timeScale = 1f;
 		pauseIcon.SetActive(true);
+		audioManager.Play("Start");
 		player.Initialize();
 	}
 

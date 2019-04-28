@@ -40,7 +40,7 @@ public class AudioManager : MonoBehaviour
 				return;
 		}
 
-		Play(sounds[UnityEngine.Random.Range(1, sounds.Length)].name);
+		Play(sounds[UnityEngine.Random.Range(1, 3)].name);
 	}
 
 	public void Play(string sound)
@@ -56,6 +56,12 @@ public class AudioManager : MonoBehaviour
 		s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
 		s.source.Play();
+	}
+
+	public bool IsPlaying(string sound) {
+		Sound s = Array.Find(sounds, item => item.name == sound);
+
+		return s.source.isPlaying;
 	}
 
 }

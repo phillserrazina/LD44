@@ -1898,6 +1898,26 @@ MonoBehaviour:
     mixerGroup: {fileID: 243407318863624168, guid: b93f5daf0e6bfd545813b062956db853,
       type: 2}
     source: {fileID: 0}
+  - name: Cheering
+    clip: {fileID: 8300000, guid: 6319cad9dbd3b104b95dbc3242a62ba5, type: 3}
+    volume: 0.519
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 243407318863624168, guid: b93f5daf0e6bfd545813b062956db853,
+      type: 2}
+    source: {fileID: 0}
+  - name: Start
+    clip: {fileID: 8300000, guid: f30175b248480f64ab1d5a612a39c8b3, type: 3}
+    volume: 0.07
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 243407318863624168, guid: b93f5daf0e6bfd545813b062956db853,
+      type: 2}
+    source: {fileID: 0}
 --- !u!4 &952092572
 Transform:
   m_ObjectHideFlags: 0
