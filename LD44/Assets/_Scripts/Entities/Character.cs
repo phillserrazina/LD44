@@ -13,6 +13,7 @@ public class Character : MonoBehaviour {
 
 	protected Rigidbody2D rb;
 	protected SpriteRenderer spriteRenderer;
+	protected AudioManager audioManager;
 
 	private bool doingDps;
 
@@ -21,6 +22,7 @@ public class Character : MonoBehaviour {
 	protected virtual void Awake () {
 		rb = GetComponent<Rigidbody2D>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
+		audioManager = FindObjectOfType<AudioManager>();
 	}
 
 	// METHODS
@@ -31,6 +33,7 @@ public class Character : MonoBehaviour {
 
 		if (gameObject.name == "Player") {
 			StartCoroutine(ShakeCamera(0.2f, 0.05f));
+			FindObjectOfType<AudioManager>().Play("Hit");
 		}
 
 		if (slowDuration != 0)

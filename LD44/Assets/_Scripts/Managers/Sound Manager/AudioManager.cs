@@ -28,10 +28,10 @@ public class AudioManager : MonoBehaviour
 			s.source.clip = s.clip;
 			s.source.loop = s.loop;
 
-			s.source.outputAudioMixerGroup = mixerGroup;
+			s.source.outputAudioMixerGroup = s.mixerGroup;
 		}
 
-		Play(sounds[UnityEngine.Random.Range(1, sounds.Length)].name);
+		Play(sounds[UnityEngine.Random.Range(1, 3)].name);
 	}
 
 	private void Update() {

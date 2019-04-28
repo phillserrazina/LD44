@@ -16,6 +16,10 @@ public class RangedAI : AI {
 		else
 		{
 			if (currentAttackCD <= 0) {
+				if (Random.value > 0.7f) {
+					audioManager.Play("AlienSpit");
+				}
+				
 				Projectile p = Instantiate(projectile, gameObject.transform.position, Quaternion.identity);
 				p.caster = this;
 				p.Initialize();

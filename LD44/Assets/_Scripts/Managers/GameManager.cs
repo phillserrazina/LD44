@@ -109,7 +109,15 @@ public class GameManager : MonoBehaviour {
 		Retry();
 	}
 
-	public void SetVolume(float volume) {
+	public void SetVolumeGeneral(float volume) {
 		audioMixer.SetFloat("volume", volume);
+	}
+
+	public void SetVolumeMusic(float volume) {
+		audioMixer.SetFloat("musicVolume", volume);
+	}
+
+	public void SetVolumeVfx(float volume) {
+		audioMixer.SetFloat("vfxVolume", volume);
 	}
 }
