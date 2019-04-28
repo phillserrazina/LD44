@@ -6,6 +6,7 @@ using TMPro;
 
 public class StoreItem : MonoBehaviour {
 
+	public Image itemIcon;
 	public TMP_Text itemName;
 	public TMP_Text itemPrice;
 	public Button buyButton;
@@ -16,6 +17,7 @@ public class StoreItem : MonoBehaviour {
 	private void OnEnable() {
 		storeManager = FindObjectOfType<StoreManager>();
 
+		itemIcon.sprite = weapon.graphic;
 		itemName.text = weapon.name;
 		itemPrice.text = weapon.price.ToString();
 		buyButton.onClick.AddListener(() => { storeManager.BuyWeapon(weapon); } );
