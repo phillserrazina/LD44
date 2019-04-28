@@ -104,7 +104,7 @@ MonoBehaviour:
   damage: 2
   level: 0
   boss: 1
-  bossLevel: 5
+  bossLevel: 10
   attackCD: 2
   distToShoot: 4
   projectile: {fileID: 114705295634843622, guid: 5d3f0e774974d6240b40d267de67fd01,
