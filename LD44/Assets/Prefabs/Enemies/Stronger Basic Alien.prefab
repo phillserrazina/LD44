@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212516268274660906}
   - component: {fileID: 50914653353631762}
   - component: {fileID: 61875862841839410}
-  - component: {fileID: 114616274440442924}
   - component: {fileID: 114623395982243294}
   m_Layer: 9
   m_Name: Stronger Basic Alien
@@ -89,21 +88,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.6}
   m_EdgeRadius: 0
---- !u!114 &114616274440442924
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1825566060761146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a64ed4225d32b694fa4b37369f7cdb9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthPoints: 20
-  speed: 1.3
-  damage: 2
-  level: 3
 --- !u!114 &114623395982243294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,6 +103,9 @@ MonoBehaviour:
   speed: 1.3
   damage: 2
   level: 3
+  boss: 0
+  bossLevel: 0
+  attackCD: 1
   distToStop: 0.5
 --- !u!212 &212516268274660906
 SpriteRenderer:

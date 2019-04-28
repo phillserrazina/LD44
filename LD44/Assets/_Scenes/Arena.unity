@@ -1861,11 +1861,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1985,6 +1985,8 @@ MonoBehaviour:
   - {fileID: 1825566060761146, guid: ee06a713826ef6f49820a16808896c4a, type: 2}
   - {fileID: 1574132812989992, guid: 954fbe5010691ea4db8bc0020fa99cd7, type: 2}
   - {fileID: 1574132812989992, guid: 276f52e496609c841b4b793e558631a5, type: 2}
+  - {fileID: 1825566060761146, guid: 66b9fb3ab46bdab43bcf3d2e40b815e9, type: 2}
+  - {fileID: 1574132812989992, guid: d47ab9e356d07e6418aa735adfcb8991, type: 2}
   spawnRate: 1
   minSpawnTime: 0.5
   maxSpawnTime: 1

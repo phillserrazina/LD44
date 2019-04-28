@@ -14,6 +14,8 @@ public class Character : MonoBehaviour {
 	protected Rigidbody2D rb;
 	protected SpriteRenderer spriteRenderer;
 
+	private bool doingDps;
+
 	// EXECUTION METHODS
 
 	protected virtual void Awake () {
@@ -34,8 +36,8 @@ public class Character : MonoBehaviour {
 		if (slowDuration != 0)
 			StartCoroutine(ApplySlow(slow, slowDuration));
 		if (dpsDuration != 0) {
-			StopCoroutine("ApplyDps");
-			StartCoroutine(ApplyDps(dps, dpsDuration));
+			if (!doingDps)
+				StartCoroutine(ApplyDps(dps, dpsDuration));
 		}
 	}
 
@@ -56,12 +58,17 @@ public class Character : MonoBehaviour {
 	}
 
 	private IEnumerator ApplyDps(float dmg, float duration) {
+		doingDps = true;
+
 		if (duration > 0) {
 			healthPoints -= dmg;
 			StartCoroutine(TakeDamageVisuals(false));
 			yield return new WaitForSeconds(1f);
 			duration--;
 			StartCoroutine (ApplyDps(dmg, duration));
+		}
+		else {
+			doingDps = false;
 		}
 	}
 

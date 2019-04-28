@@ -6,6 +6,8 @@ public class AI : Character {
 
 	public float damage;
 	public int level;
+	public bool boss;
+	public int bossLevel;
 
 	public float attackCD = 1f;
 	protected float currentAttackCD = 0;

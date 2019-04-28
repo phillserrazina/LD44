@@ -22,8 +22,17 @@ public class SpawnManager : MonoBehaviour {
 		maxEnemies = 5 * PlayerPrefs.GetInt("Level");
 
 		foreach (GameObject e in allEnemies) {
-			if (e.GetComponent<AI>().level <= PlayerPrefs.GetInt("Level")) {
-				canSpawnEnemies.Add(e);
+			AI ai = e.GetComponent<AI>();
+
+			if (ai.boss) {
+				if (ai.bossLevel == PlayerPrefs.GetInt("Level")) {
+					canSpawnEnemies.Add(e);
+				}
+			}
+			else {
+				if (ai.level <= PlayerPrefs.GetInt("Level")) {
+					canSpawnEnemies.Add(e);
+				}
 			}
 		}
 	}
@@ -47,7 +56,13 @@ public class SpawnManager : MonoBehaviour {
 
 		Vector2 spawnPos = new Vector2(spawnX, spawnY);
 
-		Instantiate(canSpawnEnemies[Random.Range(0, canSpawnEnemies.Count)], spawnPos, Quaternion.identity);
+		GameObject toSpawn = canSpawnEnemies[Random.Range(0, canSpawnEnemies.Count)];
+
+		Instantiate(toSpawn, spawnPos, Quaternion.identity);
+
+		if (toSpawn.GetComponent<AI>().boss)
+			canSpawnEnemies.Remove(toSpawn);
+
 		currentEnemies++;
 	}
 }
