@@ -9,16 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4bd7fdda16359d4db1b2438097b0129, type: 3}
-  m_Name: Bow
+  m_Name: Ice Arrow
   m_EditorClassIdentifier: 
-  weaponType: 0
-  damage: 0
-  price: 15
-  graphic: {fileID: 21300000, guid: b4f7642fdfc64ac46b28ed479f2d5047, type: 3}
-  projectile: {fileID: 114705295634843622, guid: f9dbc4684d59b7346b21e5aa851fc470,
-    type: 2}
-  currentAmmo: 12
-  slowRate: 0
-  slowDuration: 0
+  weaponType: 1
+  damage: 10
+  price: 0
+  graphic: {fileID: 21300000, guid: d86c228f891ff3a4389dff23200f4cd3, type: 3}
+  projectile: {fileID: 0}
+  currentAmmo: 0
+  slowRate: 48.4
+  slowDuration: 5
   damagePerSecond: 0
   dpsDuration: 0

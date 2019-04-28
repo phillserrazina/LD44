@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4bd7fdda16359d4db1b2438097b0129, type: 3}
-  m_Name: Bow
+  m_Name: Ice Bow
   m_EditorClassIdentifier: 
   weaponType: 0
   damage: 0
-  price: 15
-  graphic: {fileID: 21300000, guid: b4f7642fdfc64ac46b28ed479f2d5047, type: 3}
-  projectile: {fileID: 114705295634843622, guid: f9dbc4684d59b7346b21e5aa851fc470,
+  price: 20
+  graphic: {fileID: 21300000, guid: 689a95e62a242154f941d7fca02e4cf4, type: 3}
+  projectile: {fileID: 114705295634843622, guid: 8630773884535cf4bb4de5fad250c09f,
     type: 2}
-  currentAmmo: 12
+  currentAmmo: 2
   slowRate: 0
   slowDuration: 0
   damagePerSecond: 0
