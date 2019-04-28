@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
 
-	public AudioMixer audioMixer;
-
 	public void NewGame() {
 		PlayerPrefs.SetInt("Level", 1);
 		SceneManager.LoadScene("Arena");
@@ -19,9 +17,5 @@ public class MenuManager : MonoBehaviour {
 
 	public void QuitGame() {
 		Application.Quit();
-	}
-
-	public void SetVolume(float volume) {
-		audioMixer.SetFloat("volume", volume);
 	}
 }

@@ -7,7 +7,7 @@ public class SliderCleaner : MonoBehaviour {
 
 	private void OnEnable () {
 		float val;
-		FindObjectOfType<MenuManager>().audioMixer.GetFloat("volume", out val);
+		FindObjectOfType<GameManager>().audioMixer.GetFloat("volume", out val);
 		GetComponent<Slider>().value = val;
 	}
 }
