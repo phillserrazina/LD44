@@ -415,7 +415,7 @@ MonoBehaviour:
   itemName: {fileID: 114459505011677998}
   itemPrice: {fileID: 114919500343625530}
   buyButton: {fileID: 114189257555086906}
-  weapon: {fileID: 11400000, guid: 88f26d6dcb607ca4998759df02e2b8d8, type: 2}
+  weapon: {fileID: 11400000, guid: f14b40cb4400e024eb6becbe8fd017b5, type: 2}
 --- !u!114 &114861914315468172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -462,7 +462,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2e1d70c7f5d733f43afff5cc2268ac69, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb5ffef6d3899534b89b99cb0e6a7e24, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -653,7 +653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -43.5, y: 0}
+  m_AnchoredPosition: {x: -41.99, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224216515086105260
@@ -711,7 +711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -5.9}
+  m_AnchoredPosition: {x: 45.465, y: -5.9}
   m_SizeDelta: {x: 100, y: 11.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224412573555918260
@@ -730,6 +730,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35, y: 0}
-  m_SizeDelta: {x: 84.29, y: 30}
+  m_AnchoredPosition: {x: 33.869, y: 0}
+  m_SizeDelta: {x: 76.549, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
